@@ -1,6 +1,6 @@
 import { getImagesByQuery } from "./js/pixabay-api";
 import {
-    creatrGallery,
+    createGallery,
     showLoader,
     hideLoader,
 } from './js//render-functions';
