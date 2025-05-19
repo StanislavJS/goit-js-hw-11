@@ -23,8 +23,7 @@ function findImages(event) {
       message: 'The input field is empty, try again.',
       position: 'center',
     });
-    formElem.reset();
-    return;
+    return; 
   }
 
   clearGallery();
@@ -38,14 +37,13 @@ function findImages(event) {
             'Sorry, there are no images matching your search query. Please try again!',
           position: 'center',
         });
-        formElem.reset();
         return;
       }
 
       const images = data.hits;
       createGallery(images);
 
-      formElem.reset();
+      formElem.reset(); 
     })
     .catch(error => {
       iziToast.warning({
@@ -55,7 +53,6 @@ function findImages(event) {
       console.error(error);
     })
     .finally(() => {
-      hideLoader();
-      formElem.reset();
+      hideLoader(); 
     });
 }
